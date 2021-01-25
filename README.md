@@ -63,7 +63,40 @@ float average(int length, int array[])
     return sum/(float)length;
 }
 
+---------------------------------
+//성적을 입력하고 성적의 평균 값 도출하기 c나c++에서도 정상 가 
+#include<stdio.h>
 
+int sum = 0;동 
+float average(int length, int array[]);
+//실수체계의 평균이라는 변수를 선언
 
+int main(void)
+{
+  int n;
+  //int n = get_int("과목수 : ");
+  printf("입력할 과목 수: ");
+  scanf("%i",&n); 
+  //과목 수를 입력 받아 n을 결정
+  
+  int scores[n];
+  for (int i = 0 ; i < n ; i++)
+    {
+      //scores[i]=get_int("Scores%i is ",i+1); // i가 0부터 시작해서 보기 좋게 +1을 하여 1부터 시작하게 만듦
+    	printf("Score%i is ",i+1);
+		scanf("%i",&scores[i]); 
+	}
+   printf("%i 과목의  평균 점수는 %.1f 입니다.\n",n,average(n,scores));
+   printf("%i 과목의  총 점수는 %i 입니다.\n",n,sum); 
+}
+
+float average(int length, int array[])
+{
+  for (int j = 0; j < length; j++)
+    {
+        sum +=array[j]; //sum = sum + array[j];
+    }
+    return sum/(float)length;
+}
 
 
