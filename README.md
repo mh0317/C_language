@@ -114,4 +114,101 @@ int main(void)
 	
 
 }
+1/28
+//while문을 통한 학점 확인 코드 
+#include<stdio.h>
+
+
+const int N = 9; 
+const char* grade[N]={"A+","A","B+","B","C+","C","D+","D","F"};
+const int score[N]={95,90,85,80,75,70,65,60,0};
+
+int main(void)
+{
+  printf("_______________________________________________________________________________\n");
+  printf("|학점 프로그램                                                                 |\n");
+  printf("|종료를 원하면 '999' 를 입력하세요                                             |\n");
+  printf("|______________________________________________________________________________|\n");
+  printf("|                                [학점 테이블]                                 |\n");
+  printf("|점수 컷 : 95     90      85      80      75      70      65      60      0    |\n");
+  printf("|학점 컷 : A+     A       B+      B       C+      C       D+      D       F    |\n");
+  printf("|______________________________________________________________________________|\n");
+
+
+
+  while(1)
+  {
+	int input_score = 0;
+	
+    printf("성적을 입력하세요 (0~100) : ");
+    scanf("%i",&input_score);
+
+	if(input_score == 999){
+    	printf("학점 프로그램을 종료합니다.\n");
+    	break;  
+  	}
+    
+    if(input_score < 0 || input_score > 100){
+		printf("성적을 올바르게 입력하세요~! (0 ~ 100)\n");
+		continue;
+	}
+		
+    for(int i = 0; i < N;i++)
+		{if (input_score >= score[i]){
+      		printf("입력하신 성적은 %i 이고, 학점은 %s 입니다.\n",input_score,grade[i]);
+      		break;		
+					
+			}
+		}
+
+  	}	
+    
+
+}
+
+//do while문을 통한 성적에 대한 학점확인 코 드 
+#include<stdio.h>
+#define N 9
+
+
+const char *grade[N] = {"A+", "A", "B+", "B", "C+", "C", "D+", "D", "F"};
+const int score[N]={95,90,85,80,75,70,65,60,0};
+int input_score = 0;
+
+int main(void)
+{
+  printf("_______________________________________________________________________________\n");
+  printf("|학점 프로그램                                                                 |\n");
+  printf("|종료를 원하면 '999' 를 입력하세요                                             |\n");
+  printf("|______________________________________________________________________________|\n");
+  printf("|                                [학점 테이블]                                 |\n");
+  printf("|점수 컷 : 95     90      85      80      75      70      65      60      0    |\n");
+  printf("|학점 컷 : A+     A       B+      B       C+      C       D+      D       F    |\n");
+  printf("|______________________________________________________________________________|\n");
+
+
+do{
+    
+    printf("성적을 입력하세요 (0~100) : ");
+    scanf("%i",&input_score);
+    
+    
+    if(input_score > 100 || input_score < 0 ){
+		printf("성적을 올바르게 입력하세요~! (0 ~ 100)\n");
+		continue;
+	}
+		
+    for(int i =0; i < N;i++)
+		{if (input_score >= score[i]){
+      				printf("입력하신 성적은 %i 이고, 학점은 %s 입니다.\n",input_score,grade[i]);
+      		break;						
+			}
+		}
+	}     
+  while(input_score != 999);
+    printf("학점 프로그램을 종료합니다.\n");
+
+}
+
+
 
