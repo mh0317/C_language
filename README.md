@@ -210,5 +210,23 @@ do{
 
 }
 
+=====================================
+1/29
+// 원하는 값을 입력하여 결과값 얻 
 
+#include <stdio.h>
+
+int main(void)
+{
+	printf("******************************************\n"); 
+	const double pi = 3.141592;
+	double r;
+	printf("구의 반지름을 입력하시오 : ");
+	scanf("%lf",&r);
+	printf("구의 반지름은 %.1lf입니다\n",r);
+	printf("표면적은 %.6lf입니다.\n",4*pi*r*r);
+	printf("체적은  %.6lf입니다.\n",4*pi*r*r*r/3);
+		
+	return 0; 
+}기 
 
