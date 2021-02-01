@@ -312,6 +312,15 @@ int main(void)
 	
 	printf("밑변 %fcm, 높이 %fcm의 삼각형의 넓이는 %f cm^2 입니다.\n",base,height,Tri_area);  // %d로 할 경우 이상한 결과값이 출력된다. 
 	
+		//Q2 화씨 온도를 섭씨온도로 변환하는 프로그램
+	float fahrenheit,celsius;
+	
+	fahrenheit = 72.0; 
+	celsius    = (5.0/9.0) * (fahrenheit - 32);
+	
+	printf("화씨온도 %f도는 섭씨온도 %f도입니다. \n",fahrenheit,celsius);
+	
+	return 0;  
 	
 	
 	
