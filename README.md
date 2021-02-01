@@ -265,3 +265,55 @@ int main()
 	
 }
 
+// 2월 1일
+
+#include<stdio.h>
+
+int main(void)
+{
+	//변수 선언
+	int a1, a2, a3;
+	
+	a1 = 10;
+	a2 = 20;
+	a3 = a1 + a2;
+	
+	printf("a1 = %d, a2 = %d, a3 = %d\n",a1,a2,a3); 	// 10 , 20 , 30
+	
+	a3 = a2 / 2 ;
+	
+	printf("a1 = %d, a2 = %d, a3 = %d\n",a1,a2,a3);		//10 , 20 , 10
+	
+	
+	//정수형 변수의 사용
+	unsigned char age = 97;
+	int max = 2147483647; 							//int의 최대치 값을 max라는 변수에 저장 
+	int max_plus_1 = max + 1;						//int 타입의 Max plus 1에  max + 1 라는 값을 저장 but 범위 벗어나서 넣은 값과 다른 값 출력 
+	unsigned int super = max + 1;					//int 타입이나, 부호가 없어서 범위가 2배 증가하여 원하는 결과값 정상 출 력 
+	
+	printf("age = %d\nmax = %d\n",age,max);
+	printf("max + 1 = %d\n",max_plus_1);
+	printf("super = max + 1 = %u\n",super); 
+	
+	//실수형 변수의 사용
+	float radius = 10.0;
+	float area;
+	area = 3.14f * radius * radius;					// const나 define으로 Pi를 정의 내리고 사용해도 좋을듯 불변값이니 
+	
+	printf("반지름이 %f인 원의 넓이는 %f 입니다.\n",radius,area); 
+	
+	//변수와 자료형 실습
+	//Q1 밑변이 3cm , 높이가 5cm인 삼각형의 넓이는?
+	float base = 3;
+	float height = 5;
+	float Tri_area;
+	
+	Tri_area = 0.5 * base * height;
+	
+	printf("밑변 %fcm, 높이 %fcm의 삼각형의 넓이는 %f cm^2 입니다.\n",base,height,Tri_area);  // %d로 할 경우 이상한 결과값이 출력된다. 
+	
+	
+	
+	
+	 
+ } 
