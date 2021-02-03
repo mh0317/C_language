@@ -326,3 +326,63 @@ int main(void)
 	
 	 
  } 
+ 
+ 
+ // 애너그렘(anagram) 판별 
+#include<stdio.h>
+#include<string.h>
+/*
+입력값: 12345, 54321 -> 출력값: True
+입력값: 14258, 25431 -> 출력값: False
+입력값: 11132, 21131 -> 출력값: True
+*/
+int IsAnagram(const char*s1, const char*s2);
+void TestIsAnagram(const char*s1, const char*s2);
+
+int main()
+{
+ 	TestIsAnagram("mother","therom");
+	TestIsAnagram("12345","54321");
+	TestIsAnagram("14258","25431");
+	TestIsAnagram("11132","21131");
+	TestIsAnagram("cheese","eseche");
+	return 0; 
+ }
+
+
+void TestIsAnagram(const char*s1, const char*s2)
+{
+	printf("====Test : %s vs %s====\n",s1,s2);
+	if(IsAnagram(s1,s2))
+	{	
+		printf("Anagram Result : True\n");
+	}
+	else
+		printf("Anagram Result : False\n");
+ }
+ 
+   
+
+int IsAnagram(const char *s1, const char *s2)
+{
+    int i ,j;
+    for(i=0;s1[i];i++)//s1[i] 문자가 참이면(거짓은 종료 문자임) 반복
+    {
+        for(j=0;s2[j];j++)//s2[j] 문자가 참이면(거짓은 종료 문자임) 반복
+        {
+            if(s1[i] == s2[j])//s1[i]와 s2[j]가 같으면
+            {
+                break;//반복문 탈출(s2[j]은 참인 상태임)
+            }           
+        }
+        if(s2[j]==0)//s2[j] 문자가 거짓이면(같은 문자가 없을 때)
+        {
+            return 0;//anagram이 아님
+        }
+    }
+    return 1;//anagram임
+
+} 
+
+
+
