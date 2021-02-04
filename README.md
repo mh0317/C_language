@@ -384,5 +384,41 @@ int IsAnagram(const char *s1, const char *s2)
 
 } 
 
+#include<stdio.h>
+#include<string.h>
+void S_D(int arr[],int length) // Shortest Distance : 최단거리
+{
+if(length % 2 == 0) // 배열 길이가 짝수인 경우
+{
+int avg = (arr[length/2-1]+arr[length/2])/2;   //배열길이 짝수면 ,arr[1], arr[2]만고려하면됨.
+printf("출력값 : %d\n",avg);
+}
+else
+{ // 배열 길이가 홀수인 경우
+int avg = arr[length/2];    //홀수면 딱! 중간을 고려해야지.
+printf("출력값 : %d\n",avg);
+}
+}
+void print(int arr[],int length)
+{ // 입력돼있는 배열 출력 함수
+printf("입력값 :");
+for(int i=0;i<length;i++)
+printf("%2d",arr[i]);
+printf(" -> ");
+}
+int main()
+{
+int arr[] = {2,2,2,4};
+int length = sizeof(arr)/sizeof(int); // arr의 길이 계산
+print(arr,length); // 배열 출력
+S_D(arr,length); // 최단거리 출력
+int arr2[] = {1,2,3,4,5};
+int length2 = sizeof(arr2)/sizeof(int); // arr2의 길이 계산 (<- 4*5 / 4 = 5)
+print(arr2,length2); // 배열 출력
+S_D(arr2,length2); // 최단거리 출력
+return 0;
+}
+
+
 
 
