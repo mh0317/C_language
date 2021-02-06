@@ -264,7 +264,7 @@ int main()
 	return 0; 
 	
 }
-
+=========================================================
 // 2월 1일
 
 #include<stdio.h>
@@ -327,7 +327,7 @@ int main(void)
 	 
  } 
  
- 
+= ============================================================
  // 애너그렘(anagram) 판별 
 #include<stdio.h>
 #include<string.h>
@@ -383,7 +383,7 @@ int IsAnagram(const char *s1, const char *s2)
     return 1;//anagram임
 
 } 
-
+===============================================
 #include<stdio.h>
 #include<string.h>
 void S_D(int arr[],int length) // Shortest Distance : 최단거리
@@ -421,7 +421,6 @@ return 0;
 
 ===============================================
 #include <stdio.h>
-
 int main(void)
 {
     char *s = "EMMA";
@@ -433,6 +432,8 @@ int main(void)
     printf("%p\n", &s[2]);  // 문자 3번째 글자인 M이 저장된 주소가 출력 0x42aecc                   
 }
 // 배열명 arr == 배열의 시작 주소 == 첫 원소의 시작 주소 &arr[0]
+
+
 
 
 
