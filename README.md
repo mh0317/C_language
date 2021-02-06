@@ -419,6 +419,24 @@ S_D(arr2,length2); // 최단거리 출력
 return 0;
 }
 
+===============================================
+#include <stdio.h>
+
+int main(void)
+{
+    char *s = "EMMA";
+    printf("%s\n", s);      // 문자 EMMA가 출력
+    printf("%p\n", s);      // 문자 EMMA가 저장된 주소(포인트)가 출력 0x42aeca
+    printf("%p\n", &s);     // 문자 EMMA가 저장된 주소(포인트)의 주소가 출력?! 0x7fff1ba54660
+    printf("%p\n", &s[0]);  // 문자 E가 저장된 주소가 출력 0x42aeca
+    printf("%p\n", &s[1]);  // 문자 2번째 글자인 M이 저장된 주소가 출력 0x42aecb
+    printf("%p\n", &s[2]);  // 문자 3번째 글자인 M이 저장된 주소가 출력 0x42aecc                   
+}
+// 배열명 arr == 배열의 시작 주소 == 첫 원소의 시작 주소 &arr[0]
+
+
+
+
 
 
 
